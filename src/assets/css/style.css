@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+:root {
+    --black: #000000; 
+    --header:     #4c4d4c;
+    --secondary: #6f95b7;
+    --white: #ffffff;
+    --red: #ff6060;
+    --aquamarine: #3CB371;
+    --green: #19b8b6;
+    --border: #e0e0e0;
+    --ghost: #cfcfcf;
+}
+
+
+
+/*Elements*/
+.container {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.back-button .container{
+    text-decoration: none;
+    display: flex;
+    background-color: var(--aquamarine);
+    color: var(--white);
+    padding: 8px 0;
+    align-items: center; /* Центрирует и текст, и изображение по вертикали */
+    height: 40px; /* Устанавливаем фиксированную высоту кнопки */
+    border: none;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    margin-left: 0;  /* Убираем отступ слева */
+    margin-right: 0; /* Убираем отступ справа */
+    padding-left: 20px;
+}
+
+.back-button {
+    text-decoration: none;
+    display: block;
+}
+
+.back-button img {
+    filter: brightness(0) invert(1); /* Меняет цвет иконки на белый */
+    width: 35px; /* Настраиваем размер иконки для лучшего выравнивания */
+    height: auto;
+    vertical-align: middle; /* Выравниваем иконку по линии текста */
+    cursor: pointer;
+    margin-left: 2px;
+    margin-right: 8px
+}
+.light-green-text {
+    font-weight: 400;
+    color: var(--green)
+}
+.tag-button{
+    padding: 10px 45px;
+    background-color: var(--border);
+    color: var(--secondary);
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+}
+
+/*Components*/
+.header {
+    width: 100%;
+    background-color: var(--header);
+    padding: 10px 0;
+    position:fixed;
+    z-index: 99;
+    
+}
+.mobile_block {
+    min-height: 100vh;
+    padding-top: 55px;
+}
+.btn-category img {
+    width: 35px;  /* Устанавливаем нужный размер */
+    height: auto; /* Сохраняем пропорции */
+    filter: brightness(0) invert(1); /* Меняем цвет изображения на белый */
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+}
+.mobile-block_header {
+
+    padding: 8px 0;
+    text-align: center;
+    font-size: 20px;
+    color: var(--white);
+    font-weight: bold;
+}
+.is-secondary {
+    background-color: var(--secondary);
+}
+.is-green {
+    background-color: var(--green);
+}
+.is-red {
+    background-color: var(--red);
+}
+.news-card {
+    text-decoration: none;
+    display:block;
+    color: var(--black);
+    cursor: pointer;
+    padding: 15px 0;
+    border-bottom: 2.5px solid var(--border);
+}
+.news-card__title {
+    font-size: 16.5px;
+    margin-bottom: 5px;
+}
+.news-card__date, .news-card__category{
+    display:block;
+    margin-bottom: 3px;
+    font-size: 13px;
+    color: var(--secondary)
+}
+
+.post-detail-block {
+    padding: 15px 0;
+}
+
+.description{
+    padding: 10px 0;
+    font-size: 15.5px;
+    letter-spacing: 0.02em;
+}
+.news-card_date{
+    display:block;
+    margin-top: 10px;
+}
+.post-detail-block img{
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 7px 5px 0px rgba(194,194,194,1);
+    margin-bottom: 18px;
+}
+.author{
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.category-row {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 0;
+}
+.category-item{
+    text-decoration: none;
+    border: 1.5px solid var(--border);
+    padding: 30px;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    color: var(--black);
+    transition: 0.3s ease-in-out;
+}
+.category-item:hover {
+   background-color: var(--border); 
+   color:var(--secondary)
+}
+.category-item_title{
+    font-size: 18px;
+    font-weight: 600;
+}
+.category-item_img, .category-item_title{
+    display:block;
+}
+.category-item_img{
+    width: 48px;
+    height: 48px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+.category-item-wide {
+    grid-column: span 2; /* Занимает обе колонки */
+    width: 100%;
+    margin-top: -10px;
+}
+.loading-card {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+}
+.loading-detail{
+    padding:30px 0;
+}
+.loading-row{
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+.loading-item{
+    border: 1.5px solid var(--border);
+    padding: 30px;
+    border-radius: 30px;
+}
+.skeleton-icon{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--border);
+    animation: ghost 1s infinite linear;
+    margin: 0 auto;
+}
+.skeleton-small-text{   
+    width: 100px;
+    height: 15px;
+    background-color: var(--border);
+    animation: ghost 1s infinite linear;
+    margin: 0 auto; 
+    margin-top: 20px;
+    border-radius: 8px;
+
+}
+.skeleton-title, .skeleton-text, .skeleton-big-text, .skeleton-image{
+    width: 100%;
+    background-color: var(--border);
+    border-radius: 8px;
+    animation: ghost 1s infinite linear;
+    margin-bottom: 10px;
+}
+.skeleton-title{
+    height: 25px;
+}
+.skeleton-text{
+    height: 15px;
+}
+.skeleton-big-text{
+    height: 120px;
+}
+.skeleton-image{
+    height: 220px;
+}
+@keyframes ghost {
+    0% {
+        background-color: var(--border);
+    }
+    50% {
+        background-color: var(--ghost);
+    }
+    100% { 
+        background-color: var(--border);
+    }
+}
+.error {
+    background-color: var(--red);
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+.error-title{
+    font-size: 17px;
+    margin-bottom: 1px;
+}
+.error-description{ 
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.white-btn{
+    background-color: var(--white);
+    color: var(--red);
+    text-decoration: none;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 15px;
+}
